@@ -70,3 +70,16 @@ char *_strcat(char *dest, char *src)
 	}
 	return (dest);
 }
+char *_strchr(char *s, char b)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		if (s[i] == b)
+			return (&s[i]);
+
+	if (s[i] == b)
+		return (&s[i]);
+
+	return ('\0');
+}
