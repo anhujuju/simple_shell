@@ -10,12 +10,12 @@
 #include <fcntl.h>
 #include <signal.h>
 
-extern char **enviroment;
+extern char **environ;
 
 char *_getline(void);
 char **_splitline(char *line_buf);
 void _promp(int error)
-int _execute(char **args, int *flag, int mode);
+int execute(char *fullPath, char **command);
 char *_pathfinder(char *command, int mode);
 char *_catpath(char **uncatpath, char *command);
 int _builtins(char **args);
