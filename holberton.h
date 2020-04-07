@@ -10,10 +10,11 @@
 #include <fcntl.h>
 #include <signal.h>
 
-extern char **environ;
+extern char **enviroment;
 
 char *_getline(void);
 char **_splitline(char *line_buf);
+void _promp(int error)
 int _execute(char **args, int *flag, int mode);
 char *_pathfinder(char *command, int mode);
 char *_catpath(char **uncatpath, char *command);
@@ -23,7 +24,7 @@ void _env(void);
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
+int _strcmp(char *str1, char *str2);
 int _strcmp_path(char *s1, char *s2);
 unsigned int _strcspn(char *s, char *pre);
 int _strspn(char *s, const char *delimiter);
