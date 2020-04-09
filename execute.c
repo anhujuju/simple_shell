@@ -1,6 +1,11 @@
 #include "holberton.h"
-
-
+/**
+  * execute - wether or not exec
+  * @args: arguments passed
+  * @flag: -flag
+  * @mode: mode
+  * Return: integer
+  */
 int execute(char **args, int *flag, int mode)
 {
 	pid_t child;
@@ -12,12 +17,10 @@ int execute(char **args, int *flag, int mode)
 	}
 	status2 = builtins(args);
 	if (status2 < 2)
-	{
 		return (status2);
-	} 
-	for ( counter = 0; *(args[0] + counter) != NULL; counter++)
+	for (counter = 0; *(args[0] + counter) != NULL; counter++)
 	{
-		if((*args[0] + counter) == '/')
+		if ((*args[0] + counter) == '/')
 		{
 			finderflag = 1;
 			break;
@@ -25,27 +28,22 @@ int execute(char **args, int *flag, int mode)
 	}
 	if (finderflag == 0)
 	{
-		args [0] = finder(args[0],mode);
+		args[0] = finder(args[0], mode);
 		*flag = 1;
 	}
 	child = fork();
-
 	if (child == 0)
 	{
 		if (execve(args[0], args, environ) == -1)
 		{
 			perror("ERROR");
 			free(args[0]);
-			exit(EXIT_FAILURE);	
+			exit(EXIT_FAILURE);
 		}
 	}
 	else if (child < 0)
-	{
 		perror("Child couldn´t be created");
-	}
 	else
-	{
-		wait (&status);
-	}
+		wait(&status);
 	return (1);
 }
