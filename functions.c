@@ -7,7 +7,7 @@
 int _strlen(char *s);
 {
 	int i;
-
+	
 	i = 0;
 
 	while (s[i] != '\0')
@@ -57,6 +57,8 @@ char *_strcat(char *dest, char *src)
 	int i = 0;
 	int j = 0;
 	int k = 0;
+	int n = 0;
+	int c = 0;  
 
 	while (dest[i] != '\0')
 		i++;

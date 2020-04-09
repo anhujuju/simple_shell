@@ -7,6 +7,7 @@
 void env(char **env)
 {
 	int i = 0;
+	
 
 	while (env[i])
 	{

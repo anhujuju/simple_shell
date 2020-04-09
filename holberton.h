@@ -14,13 +14,13 @@ extern char **environ;
 
 char *_getline(void);
 char **_splitline(char *line_buf);
-void _promp(int error)
-int execute(char *fullPath, char **command);
-char *_pathfinder(char *command, int mode);
+void _promp(int error);
+int execute(char **args, int *flag, int mode);
+char *finder(char *command, int mode);
 char *_catpath(char **uncatpath, char *command);
-int _builtins(char **args);
+int _builtins(char **arg);
 void _cd(char **args);
-void _env(void);
+void env(char **env);
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);

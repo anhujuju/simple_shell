@@ -10,7 +10,7 @@ void _promp(int error)
 {
 	switch (error)
 	{
-case:
+case 1:
 	write(1, "\n", 1);
 	write(STDOUT_FILENO, "$ ", 2);
 	break;
