@@ -3,20 +3,28 @@
   * loop - inf loop
   * Return: integer
   */
-int loop(void)
+int main(void)
 {
-	char *line;
-	char **args;
+	char *line = NULL;
+	char **args = NULL;
 	int status, j;
 	/**
 	 * read the commands entered by the usar
 	 * it will parse the commands computer can understand the commands
 	 * execute the commands
 	 **/
-
+	signal(SIGINT, _promp);
+	if (isatty(STDERR_FILENO) != 1)
+	{
+		No_interactive(line, args);
+	}
+	else
+	{
+	
 	do {
 		j = 0;
 		write(STDOUT_FILENO, "$ ", 2);
+		line = _getline();
 		if (line == NULL)
 		{
 			break;
@@ -28,9 +36,13 @@ int loop(void)
 
 		}
 		if (status == 0)
+		{
 			free(line);
+		}
 		if (j == 1)
+		{
 			free(args[0]);
+		}
 		else
 		{
 			if (status != 0)
@@ -40,5 +52,7 @@ int loop(void)
 			free(args);
 		}
 	} while (status);
-	return (0);
 }
+return(0);
+}
+
