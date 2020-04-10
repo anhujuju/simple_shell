@@ -1,0 +1,30 @@
+.SH SIMPLE SHELL
+.B ./hsh
+\- Command interpreter
+
+
+.SH SYNOPSIS
+.B hsh
+.RB [\] options \|]
+
+
+.SH DESCRIPTION
+Program that takes commands the user types and passes them to the operating system to perform.
+It is a program interpretor. (Unix - GNU/Linux). When it has finished executing a program, it sends the
+output to the user on the screen
+
+EXAMPLE:
+$ ls -l
+
+.SH BUGS
+No Known bugs
+
+
+.SH OPTIONS
+.B env
+- environment
+.B exit
+- exits the program
+
+.SH AUTHORS
+Andres Rodríguez, Juan J. Gómez
