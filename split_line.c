@@ -1,11 +1,15 @@
 #include "holberton.h"
-
+/**
+  * _splitline - splits
+  * @line: lines
+  * Return: char
+  */
 char **_splitline(char *line)
 {
-    char **args = NULL;
+	char **args = NULL;
 	int i = 0;
 	char *token = NULL;
-    char *dup_buf = line;
+	char *dup_buf = line;
 
 	if (dup_buf == NULL)
 		return (NULL);

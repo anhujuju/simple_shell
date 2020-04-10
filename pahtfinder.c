@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+  * finder - finds path
+  * @command: command passed
+  * @mode: mode
+  * Return: char
+  */
 char *finder(char *command, int mode)
 {
 	int i = 0, j = 0, flagcurr = 0;
@@ -42,7 +47,12 @@ char *finder(char *command, int mode)
 
 return (completepath);
 }
-
+/**
+  * _catpath - reads path
+  * @uncatpath: unreads
+  * @command: commands passed
+  * Return: char
+  */
 char *_catpath(char **uncatpath, char *command)
 {
 	int i = 0;
@@ -67,7 +77,12 @@ char *_catpath(char **uncatpath, char *command)
 	}
 return (path);
 }
-
+/**
+  * _strcmp_path - compares path
+  * @s1: string 1
+  * @s2: string 2
+  * Return: integer
+  */
 int _strcmp_path(char *s1, char *s2)
 {
 	int i = 0;
