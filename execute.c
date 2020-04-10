@@ -18,7 +18,7 @@ int execute(char **args, int *flag, int mode)
 	status2 = _builtins(args);
 	if (status2 < 2)
 		return (status2);
-	for (counter = 0; *(args[0] + counter) != NULL; counter++)
+	for (counter = 0; *(args[0] + counter) != '\0'; counter++)
 	{
 		if ((*args[0] + counter) == '/')
 		{
