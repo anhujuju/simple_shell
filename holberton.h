@@ -13,7 +13,7 @@
 extern char **environ;
 
 char *_getline(void);
-char **_splitline(char *line_buf);
+char **_splitline(char *line);
 void _promp(int error);
 int execute(char **args, int *flag, int mode);
 char *finder(char *command, int mode);
