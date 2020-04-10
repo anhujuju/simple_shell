@@ -15,7 +15,7 @@ int execute(char **args, int *flag, int mode)
 	{
 		return (1);
 	}
-	status2 = builtins(args);
+	status2 = _builtins(args);
 	if (status2 < 2)
 		return (status2);
 	for (counter = 0; *(args[0] + counter) != NULL; counter++)

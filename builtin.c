@@ -7,7 +7,7 @@
 int _builtins(char **arg)
 {
 	int i = 0;
-	char *builts[] = {"exit", "env", NULL}
+	char *builts[] = {"exit", "env", NULL};
 
 	while (builts[i])
 	{

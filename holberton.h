@@ -27,7 +27,7 @@ char *_strcpy(char *dest, char *src);
 int _strcmp(char *str1, char *str2);
 int _strcmp_path(char *s1, char *s2);
 unsigned int _strcspn(char *s, char *pre);
-int _strspn(char *s, const char *delimiter);
+unsigned int _strspn(char *s, char *delimiter);
 void _nointeractive(char *line, char **args);
 char *_strchr(char *s, char b);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
