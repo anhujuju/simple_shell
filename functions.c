@@ -4,7 +4,7 @@
   * @s: string
   * Return: integer
   */
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	int i;
 
@@ -72,6 +72,12 @@ char *_strcat(char *dest, char *src)
 	}
 	return (dest);
 }
+/**
+  * _strchr - finds a spec char in a stirng
+  * @s: string
+  * @b: char to find
+  * Return: '\0'
+  */
 char *_strchr(char *s, char b)
 {
 	int i;

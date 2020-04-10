@@ -12,7 +12,7 @@ unsigned int _strspn(char *s, char *delimiter)
 
 	count = 0;
 
-	for (i = 0; s[i] != '\0'; s++; i++)
+	for (i = 0; s[i] != '\0'; s++, i++)
 	{
 		for (j = 0; delimiter[j] != '\0'; j++)
 		{
