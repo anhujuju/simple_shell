@@ -12,6 +12,7 @@
 
 extern char **environ;
 
+int loop(char **env);
 char *_getline(void);
 char **_splitline(char *line);
 void _promp(int error);
