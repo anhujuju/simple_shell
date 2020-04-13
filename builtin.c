@@ -12,18 +12,8 @@ int _builtins(char **arg)
 	while (builts[i])
 	{
 		if (_strcmp(arg[0], builts[i]) == 0)
-			break;
+			return (0);
 		i++;
 	}
-	switch (i)
-	{
-		case 0:
-			return (0);
-		case 1:
-			env(arg);
-			return (1);
-
-		default:
-			return (2);
-	}
+	return (1);
 }
