@@ -25,6 +25,6 @@ void No_interactive(char *line, char **args)
 			}
 			free(args);
 		}
-		free(line);
 	}
+	free(line);
 }
