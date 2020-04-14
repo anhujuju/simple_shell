@@ -24,6 +24,6 @@ int _builtins(char **arg)
 		env();
 		return (1);
 	default:
-		return(2);
+		return (2);
 	}
 }
