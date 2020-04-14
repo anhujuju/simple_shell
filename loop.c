@@ -9,7 +9,7 @@ int main(void)
 	char **args = NULL;
 	int status, j;
 	/**
-	 * read the commands entered by the usar
+	 * read the commands entered by the user
 	 * it will parse the commands computer can understand the commands
 	 * execute the commands
 	 **/
@@ -26,7 +26,7 @@ int main(void)
 		line = _getline();
 		if (line == NULL)
 		{
-			continue;
+			break;
 		}
 		args = _splitline(line);
 		if (args[0] != NULL)
