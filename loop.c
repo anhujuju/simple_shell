@@ -7,7 +7,7 @@ int main(void)
 {
 	char *line = NULL;
 	char **args = NULL;
-	int status, j;
+	int status = 0, j;
 	/**
 	 * read the commands entered by the user
 	 * it will parse the commands computer can understand the commands
