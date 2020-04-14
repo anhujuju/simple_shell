@@ -12,7 +12,7 @@
 
 extern char **environ;
 
-int loop(char **env);
+
 char *_getline(void);
 char **_splitline(char *line);
 void _promp(int error);
@@ -20,8 +20,7 @@ int execute(char **args, int *flag, int mode);
 char *finder(char *command, int mode);
 char *_catpath(char **uncatpath, char *command);
 int _builtins(char **arg);
-void _cd(char **args);
-void env(char **env);
+void env(void);
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
