@@ -4,14 +4,15 @@
  * @env: enviroment to print
  * Return: void
  */
-void env(char **env)
+void env(void)
 {
-	int i = 0;
+	int i = 0, k = 0;
 
-	while (env[i])
+	while (environ[i])
 	{
-		write(1, env[i], _strlen(env[i]));
-		write(1, "\n", 1);
+		k= _strlen(environ[i]);
+		write(STDOUT_FILENO, environ[i],k);
+		write(STDOUT_FILENO,"\n",1);
 		i++;
 	}
 }
