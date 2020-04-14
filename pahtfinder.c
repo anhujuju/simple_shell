@@ -8,7 +8,7 @@
 char *finder(char *command, int mode)
 {
 	int i = 0, j = 0, flagcurr = 0;
-	char *completepath = NULL, *envcpy = NULL, *token = NULL;
+	char *fullpath = NULL, *envcpy = NULL, *token = NULL;
 	char **tokens = NULL;
 
 	tokens = (char **)malloc(sizeof(char *) * 1024);
@@ -38,14 +38,14 @@ char *finder(char *command, int mode)
 	if (flagcurr == 1)
 		tokens[0] = "./";
 
-	completepath = _catpath(tokens, command);
+	fullpath = _catpath(tokens, command);
 	free(tokens);
 	free(token);
 	free(envcpy);
 	if (mode == 0)
 		free(command);
 
-return (completepath);
+return (fullpath);
 }
 /**
   * _catpath - reads path
