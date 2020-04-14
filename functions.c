@@ -54,22 +54,14 @@ char *_strcpy(char *dest, char *src)
   */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int j = 0;
-	int k = 0;
-	int n = 0;
-	int c = 0;
+	int i = _strlen(dest);
+	int j;
 
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-		c++;
-	while (k <= j)
-	{
-		dest[i] = src[k];
-		n++;
-		i++;
-	}
+	for (j = 0; src[j] != '\0'; j++)
+		dest[i + j] = src[j];
+
+	dest[i + j] = '\0';
+
 	return (dest);
 }
 /**
