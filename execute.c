@@ -38,6 +38,7 @@ int execute(char **args, int *flag, int mode)
 		{
 			perror("ERROR");
 			free(args[0]);
+			free (args);
 			exit(EXIT_FAILURE);
 		}
 	}
