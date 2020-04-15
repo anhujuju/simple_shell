@@ -6,7 +6,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <string.h>
 #include <fcntl.h>
 #include <signal.h>
 
@@ -31,7 +30,6 @@ unsigned int _strspn(char *s, char *delimiter);
 void No_interactive(char *line, char **args);
 char *_strchr(char *s, char b);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-char *_strtok_r(char *s, const char *delimiter, char **save_str);
 char *_strtok(char *s, char *delimiter);
 
 #endif

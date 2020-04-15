@@ -16,18 +16,18 @@ int _strlen(char *s)
 }
 /**
   * _strcmp - compares 2 strings
-  * @s1: string 1
-  * @s2: string 2
-  * Return: diference between s1 & s2
+  * @str1: string 1
+  * @str2: string 2
+  * Return: diference between str1 & str2
   */
-int _strcmp(char *s1, char *s2)
+int _strcmp(char *str1, char *str2)
 {
 	int i;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0')
+	while (str1[i] == str2[i] && str2[i] != '\0')
 		i++;
-	return (s1[i] - s2[i]);
+	return (str1[i] - str2[i]);
 }
 /**
   * _strcpy - copies a string
