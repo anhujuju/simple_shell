@@ -10,11 +10,14 @@ char **_splitline(char *line)
 	int i = 0;
 	char *token = NULL;
 	char *dup_buf = line;
+	int ct;
+
+	ct = _strlen(line);
 
 	if (dup_buf == NULL)
 		return (NULL);
 
-	args = (char **)malloc(sizeof(char *) * 1024);
+	args = (char **)malloc(sizeof(char *) * ct);
 	if (args == NULL)
 		return (NULL);
 
