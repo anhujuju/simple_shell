@@ -16,8 +16,8 @@ int _strlen(char *s)
 }
 /**
   * _strcmp - compares 2 strings
-  * @str1: string 1
-  * @str2: string 2
+  * @s1: string 1
+  * @s2: string 2
   * Return: diference between str1 & str2
   */
 int _strcmp(char *s1, char *s2)
