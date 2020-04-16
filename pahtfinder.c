@@ -6,15 +6,15 @@
   * @str2: string 2
   * Return: integer
   */
-int _strcmp_path(char *str1, char *str2)
+int _strcmp_path(char *s1, char *s2)
 {
 	int i = 0;
 	int c = 1;
 	int result = 0;
 
-	while (str1[i] != '\0' && str2[i] != '\0' && c < 5)
+	while (s1[i] != '\0' && s2[i] != '\0' && c < 5)
 	{
-		result = str1[i] - str2[i];
+		result = s1[i] - s2[i];
 		if (result == 0)
 			i++;
 		else

@@ -8,7 +8,7 @@
   */
 int execute(char **args, int *flag, int mode)
 {
-	pid_t pid;
+	pid_t child;
 	int status;
 	int status2 = 0;
 	int k = 0;
@@ -32,8 +32,8 @@ int execute(char **args, int *flag, int mode)
 		args[0] = finder(args[0], mode);
 		*flag = 1;
 	}
-	pid = fork();
-	if (pid == 0)
+	child = fork();
+	if (child == 0)
 	{
 		if (execve(args[0], args, environ) == -1)
 		{
@@ -43,7 +43,7 @@ int execute(char **args, int *flag, int mode)
 			exit(EXIT_FAILURE);
 		}
 	}
-	else if (pid < 0)
+	else if (child < 0)
 		perror("ERROR: Child couldn't be created");
 	else
 		wait(&status);

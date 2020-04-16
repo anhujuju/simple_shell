@@ -20,21 +20,20 @@ int _strlen(char *s)
   * @str2: string 2
   * Return: diference between str1 & str2
   */
-int _strcmp(char *str1, char *str2)
+int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
 	int c = 1;
 	int result = 0;
 
-	while (str1[i] != '\0' && str2[i] != '\0' && c == 1)
+	while (s1[i] != '\0' && s2[i] != '\0' && c == 1)
 	{
-		result = str1[i] - str2[i];
+		result = s1[i] - s2[i];
 		if (result == 0)
-		i++;
+			i++;
 		else
-		{
 			c = 0;
-		}
+
 	}
 return (result);
 }
@@ -46,18 +45,18 @@ return (result);
   */
 char *_strcpy(char *dest, char *src)
 {
-	char buffer[1025];
+char buff[1025];
 	int i = 0, j, pos = 0;
 
 	while (*(src + i) != '\0')
 	{
-		buffer[i] = *(src + i);
+		buff[i] = *(src + i);
 		i++;
 	}
 
 	for (j = 0; *(src + j) != '\0' ; j++)
 	{
-		*(dest + pos) = buffer[j];
+		*(dest + pos) = buff[j];
 		pos++;
 	}
 
@@ -90,7 +89,7 @@ char *_strcat(char *dest, char *src)
   */
 char *_strchr(char *s, char b)
 {
-	while (*s != 0)
+		while (*s != 0)
 	{
 		if (*s == b)
 			return (s);
