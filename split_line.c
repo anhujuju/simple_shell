@@ -10,9 +10,7 @@ char **_splitline(char *line)
 	int i = 0;
 	char *token = NULL;
 	char *dup_buf = line;
-	int ct;
-
-	ct = _strlen(line);
+	int ct = 1024;
 
 	if (dup_buf == NULL)
 		return (NULL);

@@ -22,12 +22,20 @@ int _strlen(char *s)
   */
 int _strcmp(char *str1, char *str2)
 {
-	int i;
+	int i = 0;
+	int c = 1;
+	int resultado = 0;
 
-	i = 0;
-	while (str1[i] == str2[i] && str2[i] != '\0')
-		i++;
-	return (str1[i] - str2[i]);
+	while (str1[i] != '\0' && str2[i] != '\0' && c == 1)
+	{
+		resultado = str1[i] - str2[i];
+		if (resultado == 0)
+			i++;
+		else
+			c = 0;
+
+	}
+return (resultado);
 }
 /**
   * _strcpy - copies a string
@@ -37,14 +45,23 @@ int _strcmp(char *str1, char *str2)
   */
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	char buff[1025];
+	int i = 0, j, pos = 0;
 
-	for (i = 0; src[i]; i++)
+	while (*(src + i) != '\0')
 	{
-		dest[i] = src[i];
+		buff[i] = *(src + i);
+		i++;
 	}
-	dest[i] = src[i];
-	return (dest);
+
+	for (j = 0; *(src + j) != '\0' ; j++)
+	{
+		*(dest + pos) = buff[j];
+		pos++;
+	}
+
+	dest[j] = '\0';
+return (dest);
 }
 /**
   * _strcat - concatenates 2 string
