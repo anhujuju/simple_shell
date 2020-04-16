@@ -75,6 +75,7 @@ char *_catpath(char **uncatpath, char *command)
 			break;
 		i++;
 	}
+	free(path);
 return (path);
 }
 /**
