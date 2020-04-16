@@ -14,7 +14,7 @@ Simply put, the shell is a program that takes commands from the keyboard and giv
 - Your shell should not have any memory leaks
 - No more than 5 functions per file
 - All your header files should be include guarded
-- Use system calls only when you need to 
+- Use system calls only when you need to
 
 # Compiling
 

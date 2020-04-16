@@ -2,8 +2,8 @@
 
 /**
   * _strcmp_path - compares path
-  * @s1: string 1
-  * @s2: string 2
+  * @str1: string 1
+  * @str2: string 2
   * Return: integer
   */
 int _strcmp_path(char *str1, char *str2)
@@ -101,4 +101,3 @@ char *_catpath(char **uncatpath, char *command)
 	}
 return (path);
 }
-

@@ -15,9 +15,7 @@ int main(void)
 	 **/
 	signal(SIGINT, _promp);
 	if (isatty(STDERR_FILENO) != 1)
-	{
 		No_interactive(line, args);
-	}
 	else
 	{
 	do {
@@ -31,16 +29,12 @@ int main(void)
 		args = _splitline(line);
 		if (args[0] != NULL)
 		{
-			status = execute(args, &j, 0);;
+			status = execute(args, &j, 0);
 		}
 		if (status == 0)
-		{
 			free(line);
-		}
 		if (j == 1)
-		{
 			free(args[0]);
-		}
 		else
 		{
 			if (status != 0)

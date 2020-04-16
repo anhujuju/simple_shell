@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
   * _splitline - splits
-  * @line: lines
+  * @line_buf: lines
   * Return: char
   */
 char **_splitline(char *line_buf)

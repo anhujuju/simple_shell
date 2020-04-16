@@ -1,0 +1,81 @@
+==1767== Memcheck, a memory error detector
+==1767== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==1767== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==1767== Command: ./EXECUTABLE
+==1767== Parent PID: 1396
+==1767== 
+--1767-- 
+--1767-- Valgrind options:
+--1767--    --leak-check=full
+--1767--    --show-leak-kinds=all
+--1767--    --track-origins=yes
+--1767--    --verbose
+--1767--    --log-file=valgrind-out.txt
+--1767-- Contents of /proc/version:
+--1767--   Linux version 3.13.0-170-generic (buildd@lcy01-amd64-001) (gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.4) ) #220-Ubuntu SMP Thu May 9 12:40:49 UTC 2019
+--1767-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2
+--1767-- Page sizes: currently 4096, max supported 4096
+--1767-- Valgrind library directory: /usr/lib/valgrind
+--1767-- Reading syms from /home/vagrant/simple_shell/EXECUTABLE
+--1767-- Reading syms from /lib/x86_64-linux-gnu/ld-2.19.so
+--1767--   Considering /lib/x86_64-linux-gnu/ld-2.19.so ..
+--1767--   .. CRC mismatch (computed aedc220e wanted 13895c11)
+--1767--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.19.so ..
+--1767--   .. CRC is valid
+--1767-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--1767--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--1767--   .. CRC mismatch (computed fed8e6c5 wanted e6be554a)
+--1767--    object doesn't have a symbol table
+--1767--    object doesn't have a dynamic symbol table
+--1767-- Scheduler: using generic scheduler lock implementation.
+--1767-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==1767== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-1767-by-vagrant-on-???
+==1767== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-1767-by-vagrant-on-???
+==1767== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-1767-by-vagrant-on-???
+==1767== 
+==1767== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==1767== don't want to do, unless you know exactly what you're doing,
+==1767== or are doing some strange experiment):
+==1767==   /usr/lib/valgrind/../../bin/vgdb --pid=1767 ...command...
+==1767== 
+==1767== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==1767==   /path/to/gdb ./EXECUTABLE
+==1767== and then give GDB the following command
+==1767==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=1767
+==1767== --pid is optional if only one valgrind process is running
+==1767== 
+--1767-- REDIR: 0x4019d70 (ld-linux-x86-64.so.2:strlen) redirected to 0x380764b1 (???)
+--1767-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--1767--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--1767--   .. CRC mismatch (computed 4bcdfe99 wanted 3143e841)
+--1767--    object doesn't have a symbol table
+--1767-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--1767--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--1767--   .. CRC mismatch (computed 3df18bf1 wanted 14fefe1c)
+--1767--    object doesn't have a symbol table
+==1767== WARNING: new redirection conflicts with existing -- ignoring it
+--1767--     old: 0x04019d70 (strlen              ) R-> (0000.0) 0x380764b1 ???
+--1767--     new: 0x04019d70 (strlen              ) R-> (2007.0) 0x04c2e1a0 strlen
+--1767-- REDIR: 0x4019b20 (ld-linux-x86-64.so.2:index) redirected to 0x4c2dd50 (index)
+--1767-- REDIR: 0x4019d40 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2f2f0 (strcmp)
+--1767-- REDIR: 0x401aa90 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c31da0 (mempcpy)
+--1767-- Reading syms from /lib/x86_64-linux-gnu/libc-2.19.so
+--1767--   Considering /lib/x86_64-linux-gnu/libc-2.19.so ..
+--1767--   .. CRC mismatch (computed 8932cdd8 wanted 3aceb420)
+--1767--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.19.so ..
+--1767--   .. CRC is valid
+--1767-- REDIR: 0x4ec4070 (libc.so.6:strcasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--1767-- REDIR: 0x4ec6360 (libc.so.6:strncasecmp) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--1767-- REDIR: 0x4ec3840 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a25720 (_vgnU_ifunc_wrapper)
+--1767-- REDIR: 0x4ec1ad0 (libc.so.6:rindex) redirected to 0x4c2da30 (rindex)
+--1767-- REDIR: 0x4eb9a80 (libc.so.6:malloc) redirected to 0x4c2ab10 (malloc)
+--1767-- REDIR: 0x4eba120 (libc.so.6:free) redirected to 0x4c2bd80 (free)
+==1767== 
+==1767== HEAP SUMMARY:
+==1767==     in use at exit: 0 bytes in 0 blocks
+==1767==   total heap usage: 1 allocs, 1 frees, 120 bytes allocated
+==1767== 
+==1767== All heap blocks were freed -- no leaks are possible
+==1767== 
+==1767== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1767== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

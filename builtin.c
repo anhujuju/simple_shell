@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
-  * builtins - set built-in commdss
-  * @arg: commands passed
+  * _builtins - set built-in commdss
+  * @args: commands passed
   * Return: 0 || 1
 **/
 int _builtins(char **args)
