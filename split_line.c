@@ -4,22 +4,20 @@
   * @line: lines
   * Return: char
   */
-char **_splitline(char *line)
+char **_splitline(char *line_buf)
 {
 	char **args = NULL;
 	int i = 0;
 	char *token = NULL;
-	char *dup_buf = line;
-	int ct = 1024;
 
-	if (dup_buf == NULL)
+	if (line_buf == NULL)
 		return (NULL);
 
-	args = (char **)malloc(sizeof(char *) * ct);
+	args = (char **)malloc(sizeof(char *) * 1024);
 	if (args == NULL)
 		return (NULL);
 
-	token = _strtok(dup_buf, "\t\r\n ");
+	token = _strtok(line_buf, "\t\r\n ");
 	while (token != NULL)
 	{
 		args[i] = token;

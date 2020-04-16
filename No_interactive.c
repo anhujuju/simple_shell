@@ -7,8 +7,8 @@
   */
 void No_interactive(char *line, char **args)
 {
-	int status, j;
-	size_t len;
+	int status = 1, j = 1;
+	size_t len = 0;
 
 	while (getline(&line, &len, stdin) != EOF)
 	{

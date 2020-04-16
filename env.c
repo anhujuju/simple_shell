@@ -5,13 +5,13 @@
  */
 void env(void)
 {
-	int i = 0, k = 0;
+int j = 0, k = 0;
 
-	while (environ[i])
+	while (environ[j])
 	{
-		k = _strlen(environ[i]);
-		write(STDOUT_FILENO, environ[i], k);
+		k = _strlen(environ[j]);
+		write(STDOUT_FILENO, environ[j], k);
 		write(STDOUT_FILENO, "\n", 1);
-		i++;
+		j++;
 	}
 }

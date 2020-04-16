@@ -1,21 +1,21 @@
 #include "holberton.h"
+
 /**
-  * _builtins - set built-in commds
+  * builtins - set built-in commdss
   * @arg: commands passed
   * Return: 0 || 1
-  */
-int _builtins(char **arg)
+**/
+int _builtins(char **args)
 {
 	int i = 0;
 	char *builts[] = {"exit", "env", NULL};
 
 	while (builts[i])
 	{
-		if (_strcmp(arg[0], builts[i]) == 0)
+		if (_strcmp(args[0], builts[i]) == 0)
 			break;
 		i++;
 	}
-
 	switch (i)
 	{
 	case 0:

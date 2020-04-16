@@ -30,11 +30,17 @@ int main(void)
 		}
 		args = _splitline(line);
 		if (args[0] != NULL)
-			status = execute(args, &j, 0);
+		{
+			status = execute(args, &j, 0);;
+		}
 		if (status == 0)
+		{
 			free(line);
+		}
 		if (j == 1)
+		{
 			free(args[0]);
+		}
 		else
 		{
 			if (status != 0)
