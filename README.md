@@ -42,6 +42,24 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 #include "myshell.h"
 
+## Files
+
+This is a table with the files and their respective description used to create the shell.
+
+| File | Description |
+| --- | --- |
+| loop.c | Main function, It receives a command typed by the user in the prompt |
+| holberton.h | Header file, contains prototypes of every function used |
+| No_interactive.c | Check if the function is not interactive |
+| split_line.c | Splits the command into arguments for processing |
+| pathfinder.c | Finds path of execution for first argument (command) if ir wasn't typed fully |
+| execute.c | Executes the the command and returns a status for continuing or stopping the main loop |
+| builtin.c | Innate commands of thell, to need of pathfinding |
+| promp.c |Prompt - function to print prompt "$ " |
+| env.c | Print enviroment |
+| functions.c | Essential functions |
+| funct2.c | Essential functions 2 |
+
 # Authors
 
 - Andres Felipe Rodríguez (@anhujuju)
